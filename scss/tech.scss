@@ -1,0 +1,47 @@
+$tech-border-radius: 4px;
+
+.tech-container {
+  
+  .tech-item {
+    text-align: center;
+    background-color: $green;
+    border-radius: $tech-border-radius;
+    position: relative;
+    width: 100%;
+    max-width: 200px;
+    padding: 30px 10px;
+
+    .tech-logo {
+      height: 100px;
+    }
+
+    .tech-item-title, .tech-item-subtitle, .tech-item-description {
+      display: block;
+      margin: 10px 0;
+    }
+
+    .tech-item-title {
+      font-size: $text-medium;
+    }
+    .tech-item-description {
+      font-size: $text-small;
+      padding-top: 10px;
+    }
+
+    .tech-item-subtitle {
+      font-weight: bold;
+    }
+
+    &::before {
+      border-radius: $tech-border-radius;
+      content: '';
+      position: absolute;
+      top: -10px;
+      bottom: 10px;
+      left: -10px;
+      right: 10px;
+      border: solid 1px $green;
+      z-index: -1;
+    }
+  }
+}
