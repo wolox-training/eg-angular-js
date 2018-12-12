@@ -1,0 +1,16 @@
+.tech-title {
+  align-items: center;
+  display: flex;
+  height: 90px;
+  overflow: hidden;
+
+  .title-decoration {
+    height: 90px;
+    width: 70px;
+  }
+
+  p {
+    font-size: $text-big !important;
+    text-indent: -18px;
+  }
+}
