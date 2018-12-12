@@ -10,11 +10,10 @@
     background-size: 70px 90px;
     bottom: 0;
     content: '';
-    left: 0;
+    left: -50px;
     position: absolute;
     right: 0;
     top: 0;
-    transform: translateX(-50px);
     z-index: -1;
   }
 }
