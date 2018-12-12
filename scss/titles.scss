@@ -3,7 +3,6 @@
   display: flex;
   font-size: $text-big;
   height: 90px;
-  padding-left: 52px;
   position: relative;
   
   &::before {
@@ -15,6 +14,7 @@
     position: absolute;
     right: 0;
     top: 0;
+    transform: translateX(-50px);
     z-index: -1;
   }
 }
