@@ -2,16 +2,20 @@ $tech-border-radius: 4px;
 $tech-border-decorator-width: 10px;
 
 .tech-container {
+  display: flex;
+  flex-flow: row wrap;
+
   .tech-item {
     background-color: $green;
     border-radius: $tech-border-radius;
     max-width: 200px;
     position: relative;
     text-align: center;
-    padding: 30px 25px;
+    padding: 30px 35px 30px 15px;
     width: 100%;
 
     .tech-logo {
+      width: 100px;
       height: 100px;
     }
 
