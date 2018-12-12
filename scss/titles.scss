@@ -1,16 +1,19 @@
 .tech-title {
   align-items: center;
   display: flex;
+  font-size: $text-big !important;
   height: 90px;
-  overflow: hidden;
-
-  .title-decoration {
-    height: 90px;
+  padding-left: 52px;
+  position: relative;
+  
+  &::before {
+    background: url(assets/triangle.svg);
+    background-size: 70px 90px;
+    content: '';
+    left: 0;
+    height: 100%;;
+    position: absolute;
     width: 70px;
-  }
-
-  p {
-    font-size: $text-big !important;
-    text-indent: -18px;
+    z-index: -1;
   }
 }
