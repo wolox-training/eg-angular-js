@@ -1,0 +1,19 @@
+.footer {
+    align-items: center;
+    background-color: #00ADEE;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px 20px;
+}
+
+.footer-note {
+    font-size: $text-big;
+}
+
+.footer-copyright {
+    align-self: flex-end;
+}
+
+.footer-copyright, .footer-note {
+    color: #fff;
+}
