@@ -15,23 +15,6 @@ $tech-border-decorator: 10px;
   padding: 10px 34px 20px 14px;
   width: 100%;
 
-  .tech-logo {
-    width: 100px;
-    height: 100px;
-  }
-
-  .tech-item-title {
-    font-size: $text-medium;
-  }
-
-  .tech-item-subtitle {
-    font-weight: bold;
-  }
-
-  .tech-item-title, .tech-item-subtitle, .tech-item-description {
-    display: block;
-  }
-
   &::before {
     border-radius: $tech-border-radius;
     content: '';
@@ -43,4 +26,21 @@ $tech-border-decorator: 10px;
     border: solid 1px $green;
     z-index: -1;
   }
+}
+
+.tech-logo {
+  width: 100px;
+  height: 100px;
+}
+
+.tech-item-title {
+  font-size: $text-medium;
+}
+
+.tech-item-subtitle {
+  font-weight: bold;
+}
+
+.tech-item-title, .tech-item-subtitle, .tech-item-description {
+  display: block;
 }
