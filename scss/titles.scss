@@ -1,20 +1,16 @@
 .tech-title {
-  align-items: center;
-  display: flex;
   font-size: $text-big;
-  height: 90px;
+  margin: 60px 0;
   position: relative;
   
   &::before {
     background: url(assets/triangle.svg) no-repeat;
-    background-size: 70px 90px;
-    bottom: 0;
-    content: '';
-    left: 0;
+    content: "";
+    height: 90px;
+    left: -50px;
     position: absolute;
-    right: 0;
-    top: 0;
-    transform: translateX(-50px);
+    top: -30px;
+    width: 70px;
     z-index: -1;
   }
 }
