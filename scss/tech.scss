@@ -1,0 +1,40 @@
+$tech-border-radius: 4px;
+$tech-border-decorator: 10px;
+
+.tech-item {
+  background-color: $green;
+  border-radius: $tech-border-radius;
+  max-width: 200px;
+  position: relative;
+  padding: 10px 34px 20px 14px;
+  text-align: center;
+  width: 100%;
+
+  &::before {
+    border: solid 1px $green;
+    border-radius: $tech-border-radius;
+    bottom: $tech-border-decorator;
+    content: '';
+    left: $tech-border-decorator * -1;
+    position: absolute;
+    right: $tech-border-decorator;
+    top: $tech-border-decorator * -1;
+    z-index: -1;
+  }
+}
+
+.tech-logo {
+  height: 100px;
+}
+
+.tech-item-title {
+  font-size: $text-medium;
+}
+
+.tech-item-subtitle {
+  font-weight: bold;
+}
+
+.tech-item-title, .tech-item-subtitle, .tech-item-description {
+  display: block;
+}
