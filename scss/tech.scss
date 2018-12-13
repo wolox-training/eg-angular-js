@@ -10,20 +10,20 @@ $tech-border-decorator: 10px;
   background-color: $green;
   border-radius: $tech-border-radius;
   max-width: 200px;
+  padding: 10px 34px 20px 14px;
   position: relative;
   text-align: center;
-  padding: 10px 34px 20px 14px;
   width: 100%;
 
   &::before {
-    border-radius: $tech-border-radius;
-    content: '';
-    position: absolute;
-    top: $tech-border-decorator * -1;
-    bottom: $tech-border-decorator;
-    left: $tech-border-decorator * -1;
-    right: $tech-border-decorator;
     border: solid 1px $green;
+    border-radius: $tech-border-radius;
+    bottom: $tech-border-decorator;
+    content: '';
+    left: $tech-border-decorator * -1;
+    position: absolute;
+    right: $tech-border-decorator;
+    top: $tech-border-decorator * -1;
     z-index: -1;
   }
 }
