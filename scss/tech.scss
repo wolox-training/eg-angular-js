@@ -1,46 +1,46 @@
 $tech-border-radius: 4px;
-$tech-border-decorator-width: 10px;
+$tech-border-decorator: 10px;
 
 .tech-container {
   display: flex;
   flex-flow: row wrap;
+}
 
-  .tech-item {
-    background-color: $green;
+.tech-item {
+  background-color: $green;
+  border-radius: $tech-border-radius;
+  max-width: 200px;
+  position: relative;
+  text-align: center;
+  padding: 10px 34px 20px 14px;
+  width: 100%;
+
+  .tech-logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .tech-item-title {
+    font-size: $text-medium;
+  }
+
+  .tech-item-subtitle {
+    font-weight: bold;
+  }
+
+  .tech-item-title, .tech-item-subtitle, .tech-item-description {
+    display: block;
+  }
+
+  &::before {
     border-radius: $tech-border-radius;
-    max-width: 200px;
-    position: relative;
-    text-align: center;
-    padding: 10px 34px 20px 14px;
-    width: 100%;
-
-    .tech-logo {
-      width: 100px;
-      height: 100px;
-    }
-
-    .tech-item-title {
-      font-size: $text-medium;
-    }
-
-    .tech-item-subtitle {
-      font-weight: bold;
-    }
-
-    .tech-item-title, .tech-item-subtitle, .tech-item-description {
-      display: block;
-    }
-
-    &::before {
-      border-radius: $tech-border-radius;
-      content: '';
-      position: absolute;
-      top: $tech-border-decorator-width * -1;
-      bottom: $tech-border-decorator-width;
-      left: $tech-border-decorator-width * -1;
-      right: $tech-border-decorator-width;
-      border: solid 1px $green;
-      z-index: -1;
-    }
+    content: '';
+    position: absolute;
+    top: $tech-border-decorator * -1;
+    bottom: $tech-border-decorator;
+    left: $tech-border-decorator * -1;
+    right: $tech-border-decorator;
+    border: solid 1px $green;
+    z-index: -1;
   }
 }
