@@ -26,6 +26,13 @@ $tech-border-decorator: 10px;
     border: solid 1px $green;
     z-index: -1;
   }
+
+  &:hover::before  {
+    top: $tech-border-decorator;
+    bottom: $tech-border-decorator * -1;
+    left: $tech-border-decorator;
+    right: $tech-border-decorator * -1;
+  }
 }
 
 .tech-logo {
