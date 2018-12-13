@@ -15,12 +15,19 @@
 .m-bottom-1 {
   margin-bottom: 10px;
 }
+
 .m-bottom-2 {
   margin-bottom: 20px;
 }
+
 .m-bottom-4 {
   margin-bottom: 40px;
 }
+
 .m-right-2 {
   margin: 20px;
+}
+
+.m-top-nav {
+  margin-top: $navbar-height;
 }
