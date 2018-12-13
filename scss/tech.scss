@@ -1,12 +1,18 @@
 $tech-border-radius: 4px;
 $tech-border-decorator: 10px;
 
+.tech-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
 .tech-item {
   background-color: $green;
   border-radius: $tech-border-radius;
+  margin: 20px;
   max-width: 200px;
-  position: relative;
   padding: 10px 34px 20px 14px;
+  position: relative;
   text-align: center;
   width: 100%;
 
@@ -24,15 +30,19 @@ $tech-border-decorator: 10px;
 }
 
 .tech-logo {
+  margin-bottom: 10px;
   height: 100px;
+  width: 100px;
 }
 
 .tech-item-title {
   font-size: $text-medium;
+  margin-bottom: 10px;
 }
 
 .tech-item-subtitle {
   font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .tech-item-title, .tech-item-subtitle, .tech-item-description {
