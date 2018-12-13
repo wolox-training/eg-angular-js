@@ -11,7 +11,7 @@ $tech-border-decorator-width: 10px;
     max-width: 200px;
     position: relative;
     text-align: center;
-    padding: 30px 35px 30px 15px;
+    padding: 10px 34px 20px 14px;
     width: 100%;
 
     .tech-logo {
@@ -29,10 +29,6 @@ $tech-border-decorator-width: 10px;
 
     .tech-item-title, .tech-item-subtitle, .tech-item-description {
       display: block;
-    }
-
-    .tech-item-subtitle, .tech-item-description {
-      font-size: $text-small;
     }
 
     &::before {
