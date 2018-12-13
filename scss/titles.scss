@@ -1,0 +1,16 @@
+.tech-title {
+  font-size: $text-big;
+  margin-top: 60px;
+  position: relative;
+  
+  &::before {
+    background: url(assets/triangle.svg) no-repeat;
+    content: "";
+    height: 90px;
+    left: -50px;
+    position: absolute;
+    top: -30px;
+    width: 70px;
+    z-index: -1;
+  }
+}
