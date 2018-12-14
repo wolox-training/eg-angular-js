@@ -33,3 +33,9 @@
 .p-top-nav {
   padding-top: $navbar-height;
 }
+
+@media only screen and (max-width: 1024px) {
+  .body{
+    align-items: center;
+  }
+}

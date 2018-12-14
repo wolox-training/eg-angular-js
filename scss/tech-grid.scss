@@ -43,3 +43,24 @@
   font-weight: bold;
   margin-bottom: 20px;
 }
+
+@media only screen and (max-width: 1024px) {
+  .tech-container {
+    display: block;
+    
+    .tech-item:first-child {
+      border-right: none;
+    }
+  
+    .tech-item {
+      border-bottom: solid 2px $green;
+      max-width: 280px;
+      padding-top: 50px;
+      width: 100%;
+
+      &:last-child {
+        border: none;
+      }
+    }
+  }
+}
