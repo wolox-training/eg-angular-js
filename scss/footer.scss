@@ -1,6 +1,6 @@
 .footer {
   align-items: center;
-  background-color: #00ADEE;
+  background-color: $blue;
   display: flex;
   flex-direction: column;
   padding: 40px 20px 20px;
@@ -15,5 +15,5 @@
 }
 
 .footer-copyright, .footer-note {
-  color: #fff;
+  color: $white;
 }
