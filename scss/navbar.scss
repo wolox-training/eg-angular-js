@@ -1,0 +1,20 @@
+.nav {
+  align-items: center;
+  background: #FFF;
+  box-shadow: 0px 8px 10px $grey;
+  display: flex;
+  height: $navbar-height;
+  justify-content: space-between;
+  padding: 0px 30px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.site-title {
+  font-size: $text-big;
+}
+
+.nav-logo {
+  height: $navbar-logo-height;
+}
