@@ -4,17 +4,13 @@
   display: grid;
   grid-template-columns: 250px 250px 250px;
   grid-template-rows: 1fr 1fr;
-  grid-template-areas: "first-tech others-tech others-tech"
-                      "first-tech others-tech others-tech";
+  grid-template-areas: "first-tech"
+                      "first-tech";
   justify-items: center;
 
   .tech-item:first-child {
     border-right: solid 2px $green;
     grid-area: first-tech;
-  }
-
-  .tech-items:not(.tech-items:first-child) {
-    grid-area: others-tech;
   }
 }
 
