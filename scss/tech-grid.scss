@@ -3,8 +3,7 @@
   align-self: center;
   display: grid;
   grid-template-columns: repeat(3, 250px);
-  grid-template-areas: "first-tech"
-                      "first-tech";
+  grid-template-rows: repeat(2, 1fr);
   justify-items: center;
 }
 
@@ -19,13 +18,12 @@
 
   &:first-child {
     border-right: solid 2px $green;
-    grid-area: first-tech;
+    grid-row: 1 / span 2;
   }
 }
 
 .tech-logo {
   margin-bottom: 10px;
-  height: 100px;
   width: 100px;
 }
 
