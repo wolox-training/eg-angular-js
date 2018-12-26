@@ -5,7 +5,8 @@ angular.
   component('booksList', {
     templateUrl: 'books/books.template.html',
     controller: function BooksListController() {
-      this.books = [
+      var ctrl = this;
+      ctrl.books = [
         {
            "id":1,
            "author":"Emmie Thiel",
@@ -89,5 +90,19 @@ angular.
         }
      ];     
     
+      ctrl.filters = [{
+        display: "Nombre",
+        value: "title"
+      }, {
+        display: "Autor",
+        value: "author"
+      }];
+
+      ctrl.search = function () {
+        ctrl.filter = {};
+        if (ctrl.filterField && ctrl.filterField.length > 0 && ctrl.filterCriteria && ctrl.filterCriteria.trim().length > 0) {
+          ctrl.filter[ctrl.filterField] = ctrl.filterCriteria;
+        }
+      }
     }
   });

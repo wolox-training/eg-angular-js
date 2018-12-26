@@ -1,0 +1,24 @@
+<div class="w-input-container">
+  <input ng-if="!$ctrl.items"
+    type="text"
+    class="w-input"
+    placeholder="{{$ctrl.placeholder}}"
+    ng-model="$ctrl.inputValue"
+    ng-keypress="$ctrl.onKeyPress($event)"
+    ng-change="$ctrl.inputValueChanged()">
+  <button ng-if="!$ctrl.items"
+    class="w-input-button"
+    ng-click="$ctrl.onSearch()">
+    <span class="fa fa-search"></span>        
+  </button>
+
+  <select class="w-input w-select"
+    name="hello" id="world"
+    ng-show="$ctrl.items"
+    ng-options="item.value as item.display for item in $ctrl.items track by item.value"
+    ng-model="$ctrl.selectValue"
+    ng-change="$ctrl.selectValueChanged()"
+    ng-class="{ 'w-input-placeholder': !$ctrl.selectValue }">
+      <option value>{{$ctrl.placeholder}}</option>
+  </select>
+</div>

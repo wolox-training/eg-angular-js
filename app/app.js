@@ -4,6 +4,7 @@
 angular.module('wBooksApp', [
   'ngRoute',
   'booksList',
+  'wInput'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
