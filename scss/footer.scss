@@ -18,3 +18,19 @@
 .footer-copyright, .footer-note {
   color: $white;
 }
+
+.footer-image {
+  max-width: 300px;
+  width: 100%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .footer-image {
+    margin-bottom: 30px;
+  }
+  
+  .footer-copyright {
+    align-self: inherit;
+    margin: 50px 0;
+  }
+}
