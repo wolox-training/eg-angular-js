@@ -1,0 +1,27 @@
+.book-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.book-item {
+  display: flex;
+  flex-direction: column;
+  width: 128px;
+  margin: 0 30px 30px 30px;
+}
+
+.book-item-image {
+  width: 128px;
+  height: 182px;
+  margin-bottom: 15px;
+}
+
+.book-item-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.book-item-author {
+
+}

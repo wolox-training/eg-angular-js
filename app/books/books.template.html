@@ -1,0 +1,17 @@
+<div class="main-container">
+  <div class="main-body pad-l-3 pad-r-3 mar-b-3">
+    <select class="form-control">
+        <option value="">Opcion 1</option>
+        <option value="">Opcion 2</option>
+      </select>
+    <input type="text" class="form-control" placeholder="Buscar...">
+  </div>
+
+  <div class="book-items main-body">
+    <div class="book-item" ng-repeat="book in $ctrl.books">
+      <img  alt="book image" src="assets/book_logo.png" class="book-item-image">
+      <p class="book-item-title">{{book.title}}</p>
+      <p class="book-item-author">{{book.author}}</p>
+    </div>
+  </div>
+</div>

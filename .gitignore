@@ -8,3 +8,11 @@
 
 ## System ##
 .DS_Store
+
+logs/*
+!.gitkeep
+app/lib/
+node_modules/
+tmp
+.DS_Store
+.idea

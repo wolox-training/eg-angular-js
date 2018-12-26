@@ -1,0 +1,31 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-body {
+  max-width: 800px;
+  width: 100%;
+}
+
+.form-control {
+  background-color: #f4f4f4;
+  padding: 10px;
+}
+
+.pad-l-3 {
+  padding-left: 30px;
+}
+
+.pad-r-3 {
+  padding-right: 30px;
+}
+
+.mar-b-3 {
+  margin-bottom: 30px;
+}
