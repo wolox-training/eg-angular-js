@@ -1,0 +1,40 @@
+.book-detail {
+  display: flex;
+}
+
+.book-detail-image {
+  width: 191px;
+}
+
+.book-detail-content {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.book-detail-title {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.book-detail-author {
+  margin-bottom: 10px;
+}
+
+.book-detail-year {
+  margin-bottom: 5px;
+}
+
+.book-detail-author, .book-detail-year {
+    font-size: 1.1rem;
+}
+
+.book-detail-genre {
+  margin-bottom: 10px;
+}
+
+.book-detail-button {
+  font-size: 1.2rem;
+  margin-top: 50px;
+}

@@ -25,6 +25,10 @@
   margin-bottom: 30px;
 }
 
+.mar-l-3 {
+  margin-left: 30px;
+}
+
 .mar-t-3 {
   margin-top: 30px;
 }
@@ -35,4 +39,27 @@
 
 .mar-r-3 {
   margin-right: 30px;
+}
+
+.splitter {
+  border-top: solid 1px $blue;
+  width: 100%;
+  margin: 30px 0;
+}
+
+.btn {
+  padding: 8px;
+  max-width: 198px;
+  width: 100%;
+}
+
+.btn-primary {
+  background: $blue;
+  color: $white;
+}
+
+.subtitle {
+  color: $green;
+  font-size: 1.3rem;
+  margin-bottom: 30px;
 }
