@@ -1,0 +1,5 @@
+a(ui-sref="bookDetail($ctrl.book)")
+  div(class="book-item" ng-class="{ 'book-item-small': $ctrl.small }")
+    img(alt="book image" src="assets/book_logo.png" ng-src="{{$ctrl.book.image_url}}" class="book-item-image")
+    p(class="book-item-title" ng-if="!$ctrl.small") {{$ctrl.book.title}}
+    p(class="book-item-author" ng-if="!$ctrl.small") {{$ctrl.book.author}}
