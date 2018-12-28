@@ -13,17 +13,17 @@ angular.
     },
     controller: function BooksListController() {
       var ctrl = this;
-      ctrl.onKeyPress = function ($event) {
+      ctrl.onKeyPress = ($event) => {
         if ($event.which === 13)
           ctrl.onSearch();
       }
 
-      ctrl.inputValueChanged = function () {
+      ctrl.inputValueChanged = () => {
         ctrl.ngModel = ctrl.inputValue;
         ctrl.onChange();
       }
 
-      ctrl.selectValueChanged = function () {
+      ctrl.selectValueChanged = () => {
         ctrl.ngModel = ctrl.selectValue;
         ctrl.onChange();
       }

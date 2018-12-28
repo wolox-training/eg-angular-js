@@ -17,5 +17,10 @@ tmp
 .DS_Store
 .idea
 
-## Pug ##
-*.html
+## Pug and Babel ##
+app/*.html
+app/*/*.html
+app/*/*/*.html
+app/*.js
+app/*/*.js
+app/*/*/*.js

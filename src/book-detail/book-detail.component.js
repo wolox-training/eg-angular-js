@@ -4,6 +4,6 @@ angular.module('bookDetail').component('bookDetail', {
   templateUrl: 'book-detail/book-detail.template.html',
   bindings: { book: '<' },
   controller: function BookDetailController () {
-    let ctrl = this;
+    const ctrl = this;
   }
 });
