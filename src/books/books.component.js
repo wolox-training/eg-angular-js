@@ -6,9 +6,7 @@ angular.
     templateUrl: 'books/books.template.html',
     bindings: { books: '<' },
     controller: function BooksListController() {
-      var ctrl = this;
-      
-      ctrl.filters = [{
+      this.filters = [{
         display: "Nombre",
         value: "title"
       }, {
@@ -16,10 +14,10 @@ angular.
         value: "author"
       }];
 
-      ctrl.search = () => {
-        ctrl.filter = {};
-        if (ctrl.filterField && ctrl.filterField.length > 0 && ctrl.filterCriteria && ctrl.filterCriteria.trim().length > 0) {
-          ctrl.filter[ctrl.filterField] = ctrl.filterCriteria;
+      this.search = () => {
+        this.filter = {};
+        if (this.filterField && this.filterField.length > 0 && this.filterCriteria && this.filterCriteria.trim().length > 0) {
+          this.filter[this.filterField] = this.filterCriteria;
         }
       }
     }

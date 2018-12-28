@@ -2,7 +2,7 @@
 
 angular.module('core.book').factory('Books', [function () {
   return {
-    get: function () {
+    get: () => {
       return [
           {
               "id":1,

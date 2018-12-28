@@ -12,20 +12,19 @@ angular.
       ngModel: '=?'
     },
     controller: function BooksListController() {
-      var ctrl = this;
-      ctrl.onKeyPress = ($event) => {
+      this.onKeyPress = ($event) => {
         if ($event.which === 13)
-          ctrl.onSearch();
+          this.onSearch();
       }
 
-      ctrl.inputValueChanged = () => {
-        ctrl.ngModel = ctrl.inputValue;
-        ctrl.onChange();
+      this.inputValueChanged = () => {
+        this.ngModel = this.inputValue;
+        this.onChange();
       }
 
-      ctrl.selectValueChanged = () => {
-        ctrl.ngModel = ctrl.selectValue;
-        ctrl.onChange();
+      this.selectValueChanged = () => {
+        this.ngModel = this.selectValue;
+        this.onChange();
       }
     }
   });

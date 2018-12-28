@@ -9,7 +9,7 @@
     "postupdate-deps": "npm run copy-libs",
     "copy-libs": "cpx \"node_modules/{angular,angular-*,@uirouter/angularjs}/**/*\" app/lib -C",
     "prestart": "npm install",
-    "start": "concurrently --kill-others \"sass --watch src/scss/application.scss:app/application.css\" \"pug src -w -d app\" \"npx babel src -d app --watch\" \"http-server -a localhost -p 8000 -c-1 ./app\"",
+    "start": "concurrently --kill-others \"sass --watch src/scss/application.scss:app/application.css\" \"pug src -w -o app\" \"npx babel src -d app --watch\" \"http-server -a localhost -p 8000 -c-1 ./app\"",
     "pretest": "npm install",
     "test": "karma start karma.conf.js",
     "test-single-run": "npm test -- --single-run",
