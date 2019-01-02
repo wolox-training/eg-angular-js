@@ -25,7 +25,9 @@ config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRou
     component: 'bookDetail',
     resolve: {
       book: (Books, $stateParams) => {
-        return Books.get().find(book => book.id == $stateParams.id);
+        return Books.get().then(data => {
+          return data.find(book => book.id == $stateParams.id);
+        })
       }
     }
   }];

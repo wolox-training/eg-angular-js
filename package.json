@@ -11,14 +11,6 @@
     "prestart": "npm install",
     "start": "concurrently --kill-others \"sass --watch src/scss/application.scss:app/application.css\" \"pug src -w -o app\" \"npx babel src -d app --watch\" \"http-server -a localhost -p 8000 -c-1 ./app\"",
     "pretest": "npm install",
-    "test": "karma start karma.conf.js",
-    "test-single-run": "npm test -- --single-run",
-    "preupdate-webdriver": "npm install",
-    "//": "Do not install the Firefox driver to work around https://github.com/angular/webdriver-manager/issues/303.",
-    "update-webdriver": "webdriver-manager update --gecko false",
-    "preprotractor": "npm run update-webdriver",
-    "protractor": "protractor e2e-tests/protractor.conf.js",
-    "update-index-async": "node --eval \"var fs=require('fs'),indexFile='app/index-async.html',loaderFile='app/lib/angular-loader/angular-loader.min.js',loaderText=fs.readFileSync(loaderFile,'utf-8').split(/sourceMappingURL=angular-loader.min.js.map/).join('sourceMappingURL=lib/angular-loader/angular-loader.min.js.map'),indexText=fs.readFileSync(indexFile,'utf-8').split(/\\/\\/@@NG_LOADER_START@@[\\s\\S]*\\/\\/@@NG_LOADER_END@@/).join('//@@NG_LOADER_START@@\\n'+loaderText+'    //@@NG_LOADER_END@@');fs.writeFileSync(indexFile,indexText);\"",
     "build": "babel src -d app"
   },
   "repository": {
@@ -31,8 +23,10 @@
     "@uirouter/angularjs": "^1.0.20",
     "angular": "^1.7.5",
     "angular-loader": "^1.7.5",
+    "angular-resource": "^1.7.5",
     "angular-route": "^1.7.5",
-    "pug": "^2.0.3"
+    "pug": "^2.0.3",
+    "wolox-equalizer": "0.0.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
