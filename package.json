@@ -9,7 +9,7 @@
     "postupdate-deps": "npm run copy-libs",
     "copy-libs": "cpx \"node_modules/{angular,angular-*,@uirouter/angularjs}/**/*\" app/lib -C",
     "prestart": "npm install",
-    "start": "concurrently --kill-others \"sass --watch src/scss/application.scss:app/application.css\" \"pug src -w -o app\" \"npx babel src -d app --watch\" \"http-server -a localhost -p 8000 -c-1 ./app\"",
+    "start": "concurrently --kill-others \"npx babel src -d app --watch\" \"http-server -a localhost -p 8000 -c-1 ./app\"",
     "pretest": "npm install",
     "build": "babel src -d app"
   },
@@ -36,12 +36,15 @@
     "concurrently": "^4.1.0",
     "cpx": "^1.5.0",
     "gulp": "^4.0.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.2",
     "http-server": "^0.11.1",
     "jasmine-core": "^3.3.0",
     "karma": "^3.1.1",
     "karma-chrome-launcher": "^2.2.0",
     "karma-firefox-launcher": "^1.1.0",
     "karma-jasmine": "^1.1.2",
+    "node-sass": "^4.11.0",
     "protractor": "^5.4.1"
   },
   "bugs": {
