@@ -1,0 +1,21 @@
+<div class="main-container">
+  <div class="main-body pad-l-3 pad-r-3 mar-b-5 mar-t-3">
+    <w-input
+      placeholder="Seleccionar filtro..."
+      items="$ctrl.filters"
+      ng-model="$ctrl.filterField"
+      class="mar-r-3"></w-input>
+    <w-input
+      placeholder="Buscar..."
+      on-search="$ctrl.search()"
+      ng-model="$ctrl.filterCriteria"></w-input>
+  </div>
+  <div class="book-items main-body">
+    <div class="book-item" ng-repeat="book in filteredBooks = ($ctrl.books | filter:$ctrl.filter)">
+      <img  alt="book image" src="assets/book_logo.png" ng-src="{{book.image_url}}" class="book-item-image">
+      <p class="book-item-title">{{book.title}}</p>
+      <p class="book-item-author">{{book.author}}</p>
+    </div>
+    <p ng-if="filteredBooks.length === 0">No se han encontrado resultados</p>
+  </div>
+</div>
