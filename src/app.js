@@ -1,6 +1,5 @@
 'use strict';
 
-// Declare app level module which depends on views, and core components
 angular.module('wBooksApp', [
   'ui.router',
   'core.book',
@@ -31,7 +30,7 @@ config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRou
       }
     }
   }];
-
+  
   $urlRouterProvider.otherwise('/books');
   states.forEach(state => $stateProvider.state(state) );
 }]);
