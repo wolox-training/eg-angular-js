@@ -14,7 +14,7 @@
 }
 
 .book-detail-title {
-  font-size: 1.5rem;
+  font-size: $text-big;
   margin-bottom: 5px;
 }
 
@@ -26,8 +26,9 @@
   margin-bottom: 5px;
 }
 
-.book-detail-author, .book-detail-year {
-    font-size: 1.1rem;
+.book-detail-author,
+.book-detail-year {
+    font-size: $text-medium;
 }
 
 .book-detail-genre {
@@ -35,6 +36,6 @@
 }
 
 .book-detail-button {
-  font-size: 1.2rem;
+  font-size: $text-medium;
   margin-top: 50px;
 }
