@@ -2,7 +2,7 @@
     <a ui-sref="booksList"><small>&lt; Volver</small></a>
 </div>
 <div class="main-container">
-  <div class="main-body mar-t-3 book-detail">
+  <div class="main-body mar-t-3 book-detail splitter">
       <div>
         <img src="assets/book_logo.png" alt="book image" ng-src="{{$ctrl.book.image_url}}"  class="book-detail-image">
       </div>
@@ -15,15 +15,13 @@
         <button class="btn btn-primary book-detail-button">Alquilar</button>
       </div>
   </div>
-  <hr class="main-body splitter">
-  <div class="main-body">
+  <div class="main-body mar-t-3 splitter">
     <h2 class="subtitle">Sugerencias</h2>
     <div class="book-items-inline">
       <book-item book="{ id: book }" small="true" ng-repeat="book in [1,2,3,4]"></book-item>
     </div>
   </div>
-  <hr class="main-body splitter">
-  <div class="main-body">
+  <div class="main-body mar-t-3">
     <h2 class="subtitle">Comentarios</h2>
   </div>
 </div>
