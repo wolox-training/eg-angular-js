@@ -1,7 +1,7 @@
 @import '_colors';
 
 .w-input-container {
-  display: inline-flex;
+  display: inline-block;
   position: relative;
 }
 
@@ -19,10 +19,6 @@
   position: absolute;
   right: 0;
   top: 0;
-
-  .fa {
-    color: $white;
-  }
 }
 
 .w-input-placeholder { 
@@ -39,20 +35,7 @@
   display: inline-block;
   padding-right: 3.5em;
   background-image: linear-gradient(50deg, transparent 50%, gray 50%), linear-gradient(125deg, gray 50%, transparent 50%);
-  background-position: calc(100% - 22px) calc(1em + 2px), calc(100% - 12px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
-  background-size: 7px 10px, 10px 10px, 1px 2em;
+  background-position: calc(100% - 22px) calc(14px + 2px), calc(100% - 12px) calc(14px + 2px);
+  background-size: 7px 10px, 10px 10px, 1px;
   background-repeat: no-repeat;
-
-  /* reset */
-  margin: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-}
-
-.w-select:-moz-focusring {
-  color: transparent;
-  text-shadow: 0 0 0 #000;
 }
