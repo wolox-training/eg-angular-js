@@ -1,4 +1,4 @@
-@import '_colors';
+@import 'colors';
 
 .w-input-container {
   display: inline-block;
@@ -21,7 +21,7 @@
   top: 0;
 }
 
-.w-input-placeholder { 
+.w-input-placeholder {
   color: $dusty-gray;
   font-style: italic;
 }
@@ -32,10 +32,10 @@
 }
 
 .w-select {
+  background-image: linear-gradient(50deg, transparent 50%, $gray 50%), linear-gradient(125deg, $gray 50%, transparent 50%);
+  background-position: calc(100% - 22px) calc(14px + 2px), calc(100% - 12px) calc(14px + 2px);
+  background-repeat: no-repeat;
+  background-size: 7px 10px, 10px 10px, 1px;
   display: inline-block;
   padding-right: 3.5em;
-  background-image: linear-gradient(50deg, transparent 50%, gray 50%), linear-gradient(125deg, gray 50%, transparent 50%);
-  background-position: calc(100% - 22px) calc(14px + 2px), calc(100% - 12px) calc(14px + 2px);
-  background-size: 7px 10px, 10px 10px, 1px;
-  background-repeat: no-repeat;
 }

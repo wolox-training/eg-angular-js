@@ -1,14 +1,14 @@
-@import '_sizes';
-@import '_colors';
+@import 'sizes';
+@import 'colors';
 
 * {
   font-family: 'Roboto', sans-serif;
 }
 
 .main-container {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .main-body {
@@ -46,13 +46,13 @@
 
 .splitter {
   border-top: solid 1px $blue;
-  width: 100%;
   margin: 30px 0;
+  width: 100%;
 }
 
 .btn {
-  padding: 8px;
   max-width: 198px;
+  padding: 8px;
   width: 100%;
 }
 
