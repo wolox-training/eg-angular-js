@@ -6,15 +6,23 @@
       div
         img(src="assets/book_logo.png" alt="book image" ng-src="{{$ctrl.book.image_url}}"  class="book-detail-image")
       .book-detail-content.mar-l-3
-        h1.book-detail-title {{$ctrl.book.title}}
-        p.book-detail-author {{$ctrl.book.author}}
-        p.book-detail-year {{$ctrl.book.year}}
-        p.book-detail-genre {{$ctrl.book.genre}}
-        p.book-detail-resume Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut  aliquip ex ea commodo consequat.
-        button.btn.btn-primary.book-detail-button Alquilar
+        h1.book-detail-title
+          | {{$ctrl.book.title}}
+        p.book-detail-author
+          | {{$ctrl.book.author}}
+        p.book-detail-year
+          | {{$ctrl.book.year}}
+        p.book-detail-genre
+          | {{$ctrl.book.genre}}
+        p.book-detail-resume
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut  aliquip ex ea commodo consequat.
+        button.btn.btn-primary.book-detail-button
+          | Alquilar
   .main-body.mar-t-3.splitter
-    h2.subtitle Sugerencias
+    h2.subtitle
+      | Sugerencias
     .book-items-inline
       book-item(book="{ id: book }" small="true" ng-repeat="book in [1,2,3,4]")
   .main-body.mar-t-3
-    h2.subtitle Comentarios
+    h2.subtitle
+      | Comentarios
