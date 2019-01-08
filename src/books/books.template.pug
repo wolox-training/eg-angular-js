@@ -11,4 +11,5 @@
       ng-model="$ctrl.filterCriteria")
   .book-items.main-body
     book-item(book="book" ng-repeat="book in filteredBooks = ($ctrl.books | filter:$ctrl.filter)")
-    p(ng-if="filteredBooks.length === 0") No se han encontrado resultados
+    p(ng-if="!filteredBooks.length")
+      | No se han encontrado resultados
