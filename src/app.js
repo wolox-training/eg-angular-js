@@ -14,7 +14,7 @@ config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRou
     url: '/books', 
     component: 'booksList',
     resolve: {
-      books: function(Books) {
+      books: (Books) => {
         return Books.get();
       }
     }

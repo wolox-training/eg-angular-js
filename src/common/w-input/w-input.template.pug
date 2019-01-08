@@ -10,10 +10,12 @@
     class="w-input-button fa fa-search"
     ng-click="$ctrl.onSearch()")
   select(class="w-input w-select"
-    name="hello" id="world"
+    name="hello"
+    id="world"
     ng-show="$ctrl.items"
     ng-options="item.value as item.display for item in $ctrl.items track by item.value"
     ng-model="$ctrl.selectValue"
     ng-change="$ctrl.selectValueChanged()"
     ng-class="{ 'w-input-placeholder': !$ctrl.selectValue }")
-    option(value="") {{$ctrl.placeholder}}
+    option(value="")
+      | {{$ctrl.placeholder}}
