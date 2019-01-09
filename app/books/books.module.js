@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('booksList', []);
+angular.module('booksList', ['core.book']);

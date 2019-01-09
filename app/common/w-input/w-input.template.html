@@ -7,11 +7,9 @@
     ng-keypress="$ctrl.onKeyPress($event)"
     ng-change="$ctrl.inputValueChanged()">
   <button ng-if="!$ctrl.items"
-    class="w-input-button"
+    class="w-input-button fa fa-search"
     ng-click="$ctrl.onSearch()">
-    <span class="fa fa-search icon"></span>        
   </button>
-
   <select class="w-input w-select"
     name="hello" id="world"
     ng-show="$ctrl.items"

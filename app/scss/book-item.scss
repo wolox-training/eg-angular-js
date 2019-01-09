@@ -1,7 +1,14 @@
-.book-items {
+.book-items, .book-items-inline {
   display: flex;
   flex-wrap: wrap;
+}
+
+.book-items {
   justify-content: space-between;
+}
+
+.book-items-inline {
+  justify-content: flex-start;
 }
 
 .book-item {
@@ -11,16 +18,16 @@
   margin: 0 30px 30px;
 }
 
+.book-item-small {
+  width: 87px;
+}
+
 .book-item-image {
-  width: 128px;
+  width: 100%;
   margin-bottom: 15px;
 }
 
 .book-item-title {
   font-weight: bold;
   margin-bottom: 5px;
-}
-
-.book-item-author {
-
 }

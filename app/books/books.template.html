@@ -11,11 +11,7 @@
       ng-model="$ctrl.filterCriteria"></w-input>
   </div>
   <div class="book-items main-body">
-    <div class="book-item" ng-repeat="book in filteredBooks = ($ctrl.books | filter:$ctrl.filter)">
-      <img  alt="book image" src="assets/book_logo.png" ng-src="{{book.image_url}}" class="book-item-image">
-      <p class="book-item-title">{{book.title}}</p>
-      <p class="book-item-author">{{book.author}}</p>
-    </div>
+    <book-item book="book" ng-repeat="book in filteredBooks = ($ctrl.books | filter:$ctrl.filter)"></book-item>
     <p ng-if="filteredBooks.length === 0">No se han encontrado resultados</p>
   </div>
 </div>
