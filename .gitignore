@@ -24,3 +24,6 @@ backstop_data
 
 #IDE files
 .vscode
+
+application.css
+application.css.map
