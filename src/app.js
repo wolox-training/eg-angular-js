@@ -2,13 +2,29 @@
 
 angular.module('wBooksApp', [
   'ui.router',
+  'core.auth',
   'core.book',
   'bookItem',
   'booksList',
   'bookDetail',
   'wInput',
-  'signUp'
+  'signUp',
+  'login'
 ]).config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+  function _skipIfAuthenticated($timeout, $state, Auth) {
+    return new Promise(async (resolve, reject) => {
+      if (await Auth.isAuthenticated()) {
+        $timeout(function () {
+          $state.go('booksList');
+        });
+        reject();
+      }
+      else {
+        resolve();
+      }
+    });
+  }
+
   var states = [{
     name: 'booksList',
     url: '/books',
@@ -32,7 +48,17 @@ angular.module('wBooksApp', [
   }, {
     name: 'signUp',
     url: '/sign-up',
-    component: 'signUp'
+    component: 'signUp',
+    resolve: {
+      skipIfAuthenticated: _skipIfAuthenticated
+    }
+  }, {
+    name: 'login',
+    url: '/login',
+    component: 'login',
+    resolve: {
+      skipIfAuthenticated: _skipIfAuthenticated
+    }
   }];
 
   $urlRouterProvider.otherwise('/books');
