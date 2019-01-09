@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('signUp', []);
+angular.module('signUp', ['core.user']);

@@ -36,7 +36,7 @@
         p.form-validator-msg(ng-if="signUpForm.lastName.$error.pattern")
           | Sólo se pueden ingresar letras y espacios
       .form-buttons
-        button.btn.mar-r-2(type="button")
+        button.btn.mar-r-2(type="button" ng-disabled="$ctrl.loading")
           | Cancelar
-        button.btn.btn-primary(type="submit" ng-disabled="signUpForm.$invalid")
+        button.btn.btn-primary(type="submit" ng-disabled="signUpForm.$invalid || $ctrl.loading")
           | Registrarse
