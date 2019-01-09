@@ -7,7 +7,8 @@ const localConfig = {
   pugWatchedFiles: 'src/**/*.pug',
   assetsWatchedFiles: 'src/assets/**/*',
   vendorJsFile: 'vendorJs.js',
-  vendorCssFile: 'vendorCss.js'
+  vendorCssFile: 'vendorCss.js',
+  configFile: 'config/config.json'
 };
 
 gulp.task('watch:scss', () => {
@@ -40,5 +41,9 @@ gulp.task('watch:assets', () => {
   gulp.watch(localConfig.assetsWatchedFiles, ['assets']);
 });
 
+gulp.task('watch:config', () => {
+  gulp.watch(localConfig.configFile, ['config']);
+});
+
 gulp.task('watch', ['watch:pug', 'watch:js', 'watch:scss', 'watch:vendor:js',
-  'watch:vendor:css', 'watch:assets']);
+  'watch:vendor:css', 'watch:assets', 'watch:config']);

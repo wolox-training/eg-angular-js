@@ -5,7 +5,7 @@ import { getConfigKeys } from '../config';
 const config = getConfigKeys();
 
 gulp.task('build', (cb) => {
-  const defaultBuildTasks = ['assets', 'pug', 'sass', 'scripts', 'vendor'];
+  const defaultBuildTasks = ['assets', 'pug', 'sass', 'scripts', 'config', 'vendor'];
   const buildTasks = config.revisioning
     ? [defaultBuildTasks, 'revisioning', 'inject', cb]
     : [defaultBuildTasks, 'inject', cb];
