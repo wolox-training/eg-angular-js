@@ -1,3 +1,5 @@
+@import 'sizes';
+
 .main-container {
   align-items: center;
   display: flex;
@@ -6,6 +8,11 @@
 
 .main-body {
   max-width: 800px;
+  width: 100%;
+}
+
+.main-body-medium {
+  max-width: 600px;
   width: 100%;
 }
 
@@ -37,7 +44,21 @@
   margin-right: 30px;
 }
 
+.mar-r-2 {
+  margin-right: 20px;
+}
+
 .splitter {
   border-bottom: solid 1px $blue;
   padding-bottom: 30px;
+}
+
+.page-title {
+  color: $black;
+  font-size: $text-big;
+  display: block;
+}
+
+.page-title-center {
+  text-align: center;
 }

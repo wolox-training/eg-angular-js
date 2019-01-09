@@ -1,0 +1,42 @@
+.main-container
+  .main-body-medium.pad-l-3.pad-r-3.mar-b-5.mar-t-3
+    h3.page-title.page-title-center.mar-b-3
+      | Registrarse
+    form.form-container(name="signUpForm" ng-submit="$ctrl.submit()")
+      .form-group
+        label.form-label(for="email")
+          | Email
+        input#email.form-control(type="email" name="email" ng-model="$ctrl.user.email"  ng-pattern="$ctrl.emailValidatorPattern" required)
+        p.form-validator-msg(ng-if="signUpForm.email.$error.required && signUpForm.email.$touched")
+          | Debe ingresar un email
+        p.form-validator-msg(ng-if="signUpForm.email.$error.pattern")
+          | Debe ingresar un email válido
+      .form-group
+        label.form-label(for="password")
+          | Password
+        input#password.form-control(type="password" name="password" ng-model="$ctrl.user.password" ng-pattern="$ctrl.passwordValidatorPattern" required)
+        p.form-validator-msg(ng-if="signUpForm.password.$error.required && signUpForm.password.$touched")
+          | Debe ingresar una contraseña
+        p.form-validator-msg(ng-if="signUpForm.password.$error.pattern")
+          | Su contraseña que tenga entre 8 y 52 caracteres, y al menos una letra y un número
+      .form-group
+        label.form-label(for="firstName")
+          | Nombre
+        input#firstName.form-control(type="text" name="firstName" ng-model="$ctrl.user.firstName" ng-pattern="/^[a-zA-Z\s]*$/" required)
+        p.form-validator-msg(ng-if="signUpForm.firstName.$error.required && signUpForm.firstName.$touched")
+          | Ingrese su nombre
+        p.form-validator-msg(ng-if="signUpForm.firstName.$error.pattern")
+          | Sólo se pueden ingresar letras y espacios
+      .form-group
+        label.form-label(for="lastName")
+          | Apellido
+        input#lastName.form-control(type="text" name="lastName" ng-model="$ctrl.user.lastName" ng-pattern="/^[a-zA-Z\s]*$/" required)
+        p.form-validator-msg(ng-if="signUpForm.lastName.$error.required && signUpForm.lastName.$touched")
+          | Ingrese su apellido
+        p.form-validator-msg(ng-if="signUpForm.lastName.$error.pattern")
+          | Sólo se pueden ingresar letras y espacios
+      .form-buttons
+        button.btn.mar-r-2(type="button")
+          | Cancelar
+        button.btn.btn-primary(type="submit" ng-disabled="signUpForm.$invalid")
+          | Registrarse
