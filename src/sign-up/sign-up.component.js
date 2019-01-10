@@ -19,8 +19,12 @@ angular.module('signUp').component('signUp', {
         }
       };
       this.loading = true;
-      await Users.create(user);
-      // $state.go('logIn'); Available in next card.
+      Users.create(user).then(() => {
+        // $state.go('logIn'); Available in next card.
+      }, error => {
+        this.loading = false;
+        alert(error);
+      });
     };
   }]
 });
