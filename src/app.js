@@ -8,7 +8,8 @@ angular.module('wBooksApp', [
   'bookDetail',
   'wInput',
   'signUp',
-  'login'
+  'login',
+  'navbar'
 ]).config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
   function _skipIfAuthenticated($timeout, $state, Auth) {
     return new Promise(async (resolve, reject) => {

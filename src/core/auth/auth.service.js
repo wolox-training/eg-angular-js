@@ -45,6 +45,9 @@ angular.module('core.auth').factory('Auth', ['$http', 'Environment', 'Session', 
           resolve(!!Session.user);
         });
         return promise;
+      },
+      signOut: () => {
+        Session.destroy();
       }
     };
   }]);
