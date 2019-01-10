@@ -5,7 +5,7 @@ angular.module('core.user').factory('Users', ['$http', 'Environment', function (
   return {
     create: (user) => {
       return $http.post(baseUrlApi, user).then(resp => {
-         return resp.data;
+        return resp.data;
       });
     }
   };
