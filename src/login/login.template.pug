@@ -6,7 +6,7 @@
       .form-group
         label.form-label(for="email")
           | Email
-        input#email.form-control(type="email" name="email" ng-model="$ctrl.user.email"  ng-pattern="$ctrl.emailValidatorPattern" required)
+        input#email.form-control(type="email" name="email" ng-model="$ctrl.user.email" ng-pattern="$ctrl.emailValidatorPattern" required)
         p.form-validator-msg(ng-if="signUpForm.email.$error.required && signUpForm.email.$touched")
           | Debe ingresar un email
         p.form-validator-msg(ng-if="signUpForm.email.$error.pattern")
