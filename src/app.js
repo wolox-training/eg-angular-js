@@ -2,7 +2,6 @@
 
 angular.module('wBooksApp', [
   'ui.router',
-  'core.auth',
   'core.book',
   'bookItem',
   'booksList',
@@ -18,9 +17,20 @@ angular.module('wBooksApp', [
           $state.go('booksList');
         });
         reject();
-      }
-      else {
+      } else {
         resolve();
+      }
+    });
+  }
+  function _redirectIfNotAuthenticated($timeout, $state, Auth) {
+    return new Promise(async (resolve, reject) => {
+      if (await Auth.isAuthenticated()) {
+        resolve();
+      } else {
+        $timeout(function () {
+          $state.go('login');
+        });
+        reject();
       }
     });
   }
@@ -30,6 +40,7 @@ angular.module('wBooksApp', [
     url: '/books',
     component: 'booksList',
     resolve: {
+      redirectIfNotAuthenticated: _redirectIfNotAuthenticated,
       books: (Books) => {
         return Books.get();
       }
@@ -39,6 +50,7 @@ angular.module('wBooksApp', [
     url: '/books/{id}',
     component: 'bookDetail',
     resolve: {
+      redirectIfNotAuthenticated: _redirectIfNotAuthenticated,
       book: (Books, $stateParams) => {
         return Books.get().then(data => {
           return data.find(book => book.id === +$stateParams.id);

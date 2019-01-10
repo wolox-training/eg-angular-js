@@ -20,7 +20,7 @@ angular.module('signUp').component('signUp', {
       };
       this.loading = true;
       await Users.create(user);
-      // $state.go('logIn'); Available in next card.
+      $state.go('login');
     };
   }]
 });

@@ -4,7 +4,7 @@ angular.
   module('bookItem', []).
   component('bookItem', {
     templateUrl: 'book-item/book-item.template.html',
-    bindings: { 
+    bindings: {
       book: '<',
       small: '@'
     },

@@ -7,5 +7,5 @@ angular.module('core.book').factory('Books', ['$http', function ($http) {
         return resp.data;
       });
     }
-  }
+  };
 }]);

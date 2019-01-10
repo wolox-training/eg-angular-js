@@ -20,5 +20,5 @@
         p.form-validator-msg(ng-if="signUpForm.password.$error.pattern")
           | Su contraseña que tenga entre 8 y 52 caracteres, y al menos una letra y un número
       .form-buttons
-        button.btn.btn-primary(type="submit" ng-disabled="signUpForm.$invalid")
+        button.btn.btn-primary(type="submit" ng-disabled="signUpForm.$invalid || $ctrl.loading")
           | Iniciar sesión
