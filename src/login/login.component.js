@@ -7,10 +7,6 @@ angular.module('login').component('login', {
     this.passwordValidatorPattern = new RegExp('^(?=.*[A-z])(?=.*[0-9]).{8,52}$');
     this.emailValidatorPattern = new RegExp('^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$');
 
-    this.user = {};
-    this.user.email = 'edwin.gomez@wolox.co';
-    this.user.password = 'a1b2c3d4e5';
-
     this.submit = async () => {
       try {
         const data = {
