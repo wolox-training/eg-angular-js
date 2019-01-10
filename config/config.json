@@ -1,7 +1,7 @@
 {
   "development": {
     "Environment": {
-      "wBooksApiUrl": "https://private-anon-665fb65b6f-wbooksapi.apiary-mock.com/api/v1/"
+      "wBooksApiUrl": "https://wbooks-api-stage.herokuapp.com/api/v1/"
     }
   },
   "production": {
