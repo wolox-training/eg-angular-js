@@ -7,6 +7,6 @@ angular.module('navbar').component('navbar', {
     this.signOut = () => {
       Auth.signOut();
       $state.go('login');
-    }
+    };
   }]
 });
