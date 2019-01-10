@@ -3,6 +3,12 @@
   "env": {                           // http://eslint.org/docs/user-guide/configuring.html#specifying-environments
     "node": true                  // node global variables
   },
+  "globals": {
+    "angular": true,
+    "localStorage": true,
+    "Promise": true,
+    "alert": true
+  },
   "rules": {
     "accessor-pairs": 0,                                          // http://eslint.org/docs/rules/accessor-pairs
     "array-bracket-spacing": [2, "never"],                        // http://eslint.org/docs/rules/array-bracket-spacing
