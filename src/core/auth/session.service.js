@@ -1,34 +1,29 @@
 'use strict';
 
-angular.module('core.auth').factory('Session', ['$http', function ($http) {
-  const updateSession = () => {
-    $http.defaults.headers.common.Authorization = this.tokenInfo.access_token;
-  };
+angular.module('core.auth').factory('Session', ['$http', 'localStorageService',
+  function ($http, localStorageService) {
+    const updateSession = () => {
+      $http.defaults.headers.common.Authorization = this.tokenInfo.access_token;
+    };
+    this.tokenInfo = localStorageService.getObject('tokenInfo');
+    if (this.tokenInfo) {
+      updateSession();
+    }
+    this.user = localStorageService.getObject('user');
+    this.create = function (tokenInfo) {
+      localStorageService.setObject('tokenInfo', tokenInfo);
+      this.tokenInfo = tokenInfo;
+      updateSession();
+    };
+    this.setUser = (user) => {
+      localStorageService.setObject('user', user);
+      this.user = user;
+    };
+    this.destroy = () => {
+      localStorageService.remove(['user', 'tokenInfo']);
+      this.user = null;
+      this.tokenInfo = null;
+    };
 
-  const localTokenInfo = localStorage.getItem('tokenInfo');
-  const localUser = localStorage.getItem('user');
-  if (localTokenInfo) {
-    this.tokenInfo = JSON.parse(localTokenInfo);
-    updateSession();
-  }
-  if (localUser) {
-    this.user = JSON.parse(localUser);
-  }
-  this.create = function (tokenInfo) {
-    localStorage.setItem('tokenInfo', JSON.stringify(tokenInfo));
-    this.tokenInfo = tokenInfo;
-    updateSession();
-  };
-  this.setUser = (user) => {
-    localStorage.setItem('user', JSON.stringify(user));
-    this.user = user;
-  };
-  this.destroy = function () {
-    localStorage.removeItem('user');
-    localStorage.removeItem('tokenInfo');
-    this.user = null;
-    this.tokenInfo = null;
-  };
-
-  return this;
-}]);
+    return this;
+  }]);
