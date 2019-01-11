@@ -3,9 +3,9 @@
 angular.module('login').component('login', {
   templateUrl: 'login/login.template.html',
   bindings: { books: '<' },
-  controller: ['Auth', '$state', function BooksListController(Auth, $state) {
-    this.passwordValidatorPattern = new RegExp('^(?=.*[A-z])(?=.*[0-9]).{8,52}$');
-    this.emailValidatorPattern = new RegExp('^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$');
+  controller: ['Auth', '$state', 'Constants', function BooksListController(Auth, $state, Constants) {
+    this.passwordValidatorPattern = new RegExp(Constants.USER_PSSWORD_PATTERN);
+    this.emailValidatorPattern = new RegExp(Constants.USER_EMAIL_PATTERN);
 
     this.submit = async () => {
       const data = {

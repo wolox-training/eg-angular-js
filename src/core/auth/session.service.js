@@ -1,28 +1,21 @@
 'use strict';
 
-angular.module('core.auth').factory('Session', function () {
-  const localTokenInfo = localStorage.getItem('tokenInfo');
-  const localUser = localStorage.getItem('user');
-  if (localTokenInfo) {
-    this.tokenInfo = JSON.parse(localTokenInfo);
-  }
-  if (localUser) {
-    this.user = JSON.parse(localUser);
-  }
+angular.module('core.auth').factory('Session', ['localStorageService', function (localStorageService) {
+  this.tokenInfo = localStorageService.getObject('tokenInfo');
+  this.user = localStorageService.getObject('user');
   this.create = function (tokenInfo) {
-    localStorage.setItem('tokenInfo', JSON.stringify(tokenInfo));
+    localStorageService.setObject('tokenInfo', tokenInfo);
     this.tokenInfo = tokenInfo;
   };
   this.setUser = (user) => {
-    localStorage.setItem('user', JSON.stringify(user));
+    localStorageService.setObject('user', user);
     this.user = user;
   };
-  this.destroy = function () {
-    localStorage.removeItem('user');
-    localStorage.removeItem('tokenInfo');
+  this.destroy = () => {
+    localStorageService.remove(['user', 'tokenInfo']);
     this.user = null;
     this.tokenInfo = null;
   };
 
   return this;
-});
+}]);
