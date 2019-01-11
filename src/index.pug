@@ -1,0 +1,22 @@
+doctype html
+html(lang="es" ng-app="wBooksApp" class="no-js")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title WBooks
+    link(rel="stylesheet" href="css/application.css")
+  body
+    ui-view
+    script(src="js/vendor/angular.js")
+    script(src="js/vendor/angular-ui-router.js")
+    script(src="js/vendor/angular-resource.js")
+    script(src="js/common/w-input/w-input.component.js")
+    script(src="js/core/book/book.module.js")
+    script(src="js/core/book/book.service.js")
+    script(src="js/book-item/book-item.component.js")
+    script(src="js/books/books.module.js")
+    script(src="js/books/books.component.js")
+    script(src="js/book-detail/book-detail.module.js")
+    script(src="js/book-detail/book-detail.component.js")
+    script(src="js/app.js")

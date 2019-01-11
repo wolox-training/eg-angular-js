@@ -1,21 +1,29 @@
-### Sass ###
-.sass-cache/
-.scss-cache/
-*.css.map
-*.sass.map
-*.scss.map
-*.css
+# npm dependencies
+node_modules
 
-## System ##
+# npm log file
+npm-debug.log
+
+# compiled code folder
+build
+
+# aws keys file
+config/aws.js
+
+# config keys
+config/secrets.js
+
+# mac files
 .DS_Store
 
-logs/*
-!.gitkeep
-app/lib/
-node_modules/
-tmp
-.DS_Store
-.idea
+# deploy cache
+.awspublish*
 
-## Pug ##
-*.html
+#Backstopjs images
+backstop_data
+
+#IDE files
+.vscode
+
+application.css
+application.css.map

@@ -1,0 +1,34 @@
+.book-items,
+.book-items-inline {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.book-items {
+  justify-content: space-between;
+}
+
+.book-items-inline {
+  justify-content: flex-start;
+}
+
+.book-item {
+  display: flex;
+  flex-direction: column;
+  margin: 0 30px 30px;
+  width: 128px;
+}
+
+.book-item-small {
+  width: 87px;
+}
+
+.book-item-image {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.book-item-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}

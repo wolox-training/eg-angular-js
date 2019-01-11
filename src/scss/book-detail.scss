@@ -1,0 +1,42 @@
+.book-detail {
+  display: flex;
+}
+
+.book-detail-image {
+  max-height: 300px;
+  width: 191px;
+}
+
+.book-detail-content {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.book-detail-title {
+  font-size: $text-big;
+  margin-bottom: 5px;
+}
+
+.book-detail-author {
+  margin-bottom: 10px;
+}
+
+.book-detail-year {
+  margin-bottom: 5px;
+}
+
+.book-detail-author,
+.book-detail-year {
+  font-size: $text-medium;
+}
+
+.book-detail-genre {
+  margin-bottom: 10px;
+}
+
+.book-detail-button {
+  font-size: $text-medium;
+  margin-top: 50px;
+}
