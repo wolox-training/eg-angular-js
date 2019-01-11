@@ -13,7 +13,7 @@ angular.module('wBooksApp', [
   'navbar'
 ]).config(['$stateProvider', '$urlRouterProvider', '$translateProvider',
   function($stateProvider, $urlRouterProvider, $translateProvider) {
-    var translations = {
+    const translations = {
       global: {
         search: 'Buscar',
         noDataFound: 'No se han encontrado resultados',
@@ -36,7 +36,7 @@ angular.module('wBooksApp', [
       booksDetail: {
         rent: 'Alquilar',
         suggestions: 'Sugerencias',
-        comments: "Comentarios"
+        comments: 'Comentarios'
       },
       navBar: {
         profile: 'Perfil',
