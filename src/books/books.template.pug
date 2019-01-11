@@ -2,14 +2,13 @@ navbar
 .main-container
   .main-body.pad-l-3.pad-r-3.mar-b-5.mar-t-3
     w-input.mar-r-3(
-      placeholder="Seleccionar filtro..."
+      placeholder="{{'booksList.selectFilter' | translate}}..."
       items="$ctrl.filters"
       ng-model="$ctrl.filterField")
     w-input(
-      placeholder="Buscar..."
+      placeholder="{{'booksList.search' | translate}}..."
       on-search="$ctrl.search()"
       ng-model="$ctrl.filterCriteria")
   .book-items.main-body
     book-item(book="book" ng-repeat="book in filteredBooks = ($ctrl.books | filter:$ctrl.filter)")
-    p(ng-if="!filteredBooks.length")
-      | No se han encontrado resultados
+    p(ng-if="!filteredBooks.length" translate="global.noDataFound")
