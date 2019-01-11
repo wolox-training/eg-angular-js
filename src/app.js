@@ -11,10 +11,10 @@ angular.module('wBooksApp', [
   'login',
   'navbar'
 ]).config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
-  function _skipIfAuthenticated($timeout, $state, Auth) {
+  const _skipIfAuthenticated = ($timeout, $state, Auth) => {
     return new Promise(async (resolve, reject) => {
       if (await Auth.isAuthenticated()) {
-        $timeout(function () {
+        $timeout(() => {
           $state.go('booksList');
         });
         reject();
@@ -22,19 +22,20 @@ angular.module('wBooksApp', [
         resolve();
       }
     });
-  }
-  function _redirectIfNotAuthenticated($timeout, $state, Auth) {
+  };
+
+  const _redirectIfNotAuthenticated = ($timeout, $state, Auth) => {
     return new Promise(async (resolve, reject) => {
       if (await Auth.isAuthenticated()) {
         resolve();
       } else {
-        $timeout(function () {
+        $timeout(() => {
           $state.go('login');
         });
         reject();
       }
     });
-  }
+  };
 
   var states = [{
     name: 'booksList',
