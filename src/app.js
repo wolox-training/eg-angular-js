@@ -16,7 +16,8 @@ angular.module('wBooksApp', [
     var translations = {
       global: {
         search: 'Buscar',
-        noDataFound: 'No se han encontrado resultados'
+        noDataFound: 'No se han encontrado resultados',
+        back: 'Volver'
       },
       login: {
         title: 'Iniciar sesión',
@@ -31,6 +32,15 @@ angular.module('wBooksApp', [
       booksList: {
         selectFilter: 'Seleccionar filtro',
         search: '@:global.search'
+      },
+      booksDetail: {
+        rent: 'Alquilar',
+        suggestions: 'Sugerencias',
+        comments: "Comentarios"
+      },
+      navBar: {
+        profile: 'Perfil',
+        signOut: 'Cerrar sesión'
       }
     };
     $translateProvider

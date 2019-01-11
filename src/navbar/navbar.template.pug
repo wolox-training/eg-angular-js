@@ -10,8 +10,6 @@
       img.navbar-icon.navbar-icon-profile(src="assets/default_profile.jpg" alt="profile image")
       ul.submenu.session-submenu(ng-if="$ctrl.profileOpened")
         li.submenu-item
-          a.submenu-button
-            | Perfil
+          a.submenu-button(translate="navBar.profile")
         li.submenu-item
-          a.submenu-button(ng-click="$ctrl.signOut()")
-            | Cerrar sesión
+          a.submenu-button(ng-click="$ctrl.signOut()" translate="navBar.signOut")
