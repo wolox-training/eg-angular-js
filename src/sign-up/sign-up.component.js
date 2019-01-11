@@ -20,6 +20,7 @@ angular.module('signUp').component('signUp', {
       };
       this.loading = true;
       Users.create(user).then(() => {
+        $state.go('login');
       }, error => {
         this.loading = false;
         alert(error);

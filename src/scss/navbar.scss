@@ -1,0 +1,56 @@
+@import 'colors';
+
+.navbar-container {
+  box-shadow: 0 0 15px $dusty-gray;
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  padding: 23px 34px;
+}
+
+.navbar-logo {
+  height: 50px;
+}
+
+.navbar-icons {
+  align-items: center;
+  display: flex;
+}
+
+.navbar-icon {
+  cursor: pointer;
+  height: 30px;
+  margin: 0 20px;
+}
+
+.navbar-icon-profile {
+  border-radius: 50%;
+  height: 40px;
+}
+
+.navbar-icon-item {
+  position: relative;
+}
+
+.submenu {
+  background: $white;
+  box-shadow: 0 0 5px $dusty-gray;
+  position: absolute;
+  right: 0;
+}
+
+.submenu-item {
+  &:hover {
+    background-color: $wild-sand;
+  }
+}
+
+.submenu-button {
+  display: block;
+  padding: 10px 15px;
+  white-space: nowrap;
+}
+
+.session-submenu {
+  width: 160px;
+}

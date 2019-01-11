@@ -11,6 +11,11 @@ angular.module('core.user').factory('Users', ['$http', 'Environment', function (
           throw new Error(resp.data.error);
         }
       });
+    },
+    information: () => {
+      return $http.get(baseUrlApi + '/me').then(resp => {
+        return resp.data;
+      });
     }
   };
 }]);
