@@ -1,26 +1,18 @@
 .main-container
   .main-body-medium.pad-l-3.pad-r-3.mar-b-5.mar-t-3
-    h3.page-title.page-title-center.mar-b-3
-      | Login
+    h3.page-title.page-title-center.mar-b-3(translate="login.title")
     form.form-container(name="signUpForm" ng-submit="$ctrl.submit()")
       .alert(ng-if="$ctrl.errorMessage")
         | {{$ctrl.errorMessage}}
       .form-group
-        label.form-label(for="email")
-          | Email
+        label.form-label(for="email" translate="login.email")
         input#email.form-control(type="email" name="email" ng-model="$ctrl.user.email" ng-pattern="$ctrl.emailValidatorPattern" required)
-        p.form-validator-msg(ng-if="signUpForm.email.$error.required && signUpForm.email.$touched")
-          | Debe ingresar un email
-        p.form-validator-msg(ng-if="signUpForm.email.$error.pattern")
-          | Debe ingresar un email válido
+        p.form-validator-msg(ng-if="signUpForm.email.$error.required && signUpForm.email.$touched" translate="login.emailRequired")
+        p.form-validator-msg(ng-if="signUpForm.email.$error.pattern" translate="login.emailInvalid")
       .form-group
-        label.form-label(for="password")
-          | Password
+        label.form-label(for="password" translate="login.password")
         input#password.form-control(type="password" name="password" ng-model="$ctrl.user.password" ng-pattern="$ctrl.passwordValidatorPattern" required)
-        p.form-validator-msg(ng-if="signUpForm.password.$error.required && signUpForm.password.$touched")
-          | Debe ingresar una contraseña
-        p.form-validator-msg(ng-if="signUpForm.password.$error.pattern")
-          | Su contraseña que tenga entre 8 y 52 caracteres, y al menos una letra y un número
+        p.form-validator-msg(ng-if="signUpForm.password.$error.required && signUpForm.password.$touched" translate="login.passwordRequired")
+        p.form-validator-msg(ng-if="signUpForm.password.$error.pattern" translate="login.passwordInvalid")
       .form-buttons
-        button.btn.btn-primary(type="submit" ng-disabled="signUpForm.$invalid || $ctrl.loading")
-          | Iniciar sesión
+        button.btn.btn-primary(type="submit" ng-disabled="signUpForm.$invalid || $ctrl.loading" translate="login.loginAction")
