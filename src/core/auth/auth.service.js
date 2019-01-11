@@ -8,7 +8,6 @@ angular.module('core.auth').factory('Auth', ['$http', 'Environment', 'Session', 
         return $http.post(baseUrlApi, session).then(async resp => {
           if (resp.data.access_token) {
             Session.create(resp.data);
-            $http.defaults.headers.common.Authorization = resp.data.access_token;
             let user = await Users.information();
             const userEntity = {
               id: user.id,

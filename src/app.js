@@ -54,9 +54,7 @@ angular.module('wBooksApp', [
     resolve: {
       redirectIfNotAuthenticated: _redirectIfNotAuthenticated,
       book: (Books, $stateParams) => {
-        return Books.get().then(data => {
-          return data.find(book => book.id === +$stateParams.id);
-        });
+        return Books.information(+$stateParams.id);
       }
     }
   }, {
