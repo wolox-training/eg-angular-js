@@ -3,10 +3,10 @@
 angular.module('signUp').component('signUp', {
   templateUrl: 'sign-up/sign-up.template.html',
   bindings: { books: '<' },
-  controller: ['$state', 'Users', function BooksListController($state, Users) {
-    this.passwordValidatorPattern = new RegExp('^(?=.*[A-z])(?=.*[0-9]).{8,52}$');
-    this.emailValidatorPattern = new RegExp('^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$');
-
+  controller: ['$state', 'Users', 'Constants', function BooksListController($state, Users, Constants) {
+    this.passwordValidatorPattern = new RegExp(Constants.USER_PSSWORD_PATTERN);
+    this.emailValidatorPattern = new RegExp(Constants.USER_EMAIL_PATTERN);
+    this.onlyCharsAndSpacesPattern = new RegExp(Constants.ONLY_CHARS_AND_SPACES_PATTERN);
     this.submit = async () => {
       const user = {
         user: {
@@ -20,7 +20,6 @@ angular.module('signUp').component('signUp', {
       };
       this.loading = true;
       Users.create(user).then(() => {
-        // $state.go('logIn'); Available in next card.
       }, error => {
         this.loading = false;
         alert(error);
