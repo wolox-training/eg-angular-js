@@ -8,29 +8,18 @@ angular.module('login').component('login', {
     this.emailValidatorPattern = new RegExp('^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$');
 
     this.submit = async () => {
-      try {
-        const data = {
-          session: this.user
-        };
-        this.loading = true;
+      const data = {
+        session: this.user
+      };
+      this.loading = true;
 
-        Auth.authenticate(data).then(autenticated => {
-          if (autenticated) {
-            $state.go('booksList');
-          }
-          this.loading = false;
-        }, error => {
-          this.loading = false;
-          alert(error);
-        });
-
-        // if (await Auth.authenticate(data)) {
-        //   $state.go('booksList');
-        // }
-      } catch (error) {
-        // alert(error);
-      }
-      // this.loading = false;
+      Auth.authenticate(data).then(() => {
+        $state.go('booksList');
+        this.loading = false;
+      }, error => {
+        this.loading = false;
+        this.errorMessage = error;
+      });
     };
   }]
 });
