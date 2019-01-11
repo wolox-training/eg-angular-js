@@ -9,7 +9,7 @@
     "postupdate-deps": "npm run copy-libs",
     "copy-libs": "cpx \"node_modules/{angular,angular-*,@uirouter/angularjs}/**/*\" app/lib -C",
     "prestart": "npm install",
-    "start": "http-server -a localhost -p 8000 -c-1 ./app",
+    "start": "concurrently --kill-others \"sass --watch app/scss/application.scss:app/application.css\" \"pug app -w\" \"http-server -a localhost -p 8000 -c-1 ./app\"",
     "pretest": "npm install",
     "test": "karma start karma.conf.js",
     "test-single-run": "npm test -- --single-run",
@@ -30,10 +30,12 @@
     "@uirouter/angularjs": "^1.0.20",
     "angular": "^1.7.5",
     "angular-loader": "^1.7.5",
-    "angular-route": "^1.7.5"
+    "angular-route": "^1.7.5",
+    "pug": "^2.0.3"
   },
   "devDependencies": {
     "angular-mocks": "^1.7.5",
+    "concurrently": "^4.1.0",
     "cpx": "^1.5.0",
     "http-server": "^0.11.1",
     "jasmine-core": "^3.3.0",

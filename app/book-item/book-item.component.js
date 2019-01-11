@@ -9,7 +9,5 @@ angular.
       small: '@'
     },
     controller: function BooksListController() {
-      var ctrl = this;
-
     }
   });
