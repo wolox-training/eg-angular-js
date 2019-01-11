@@ -1,10 +1,9 @@
 .main-container
   .main-body.pad-l-3.pad-r-3.mar-b-5.mar-t-3
-    w-input(
+    w-input.mar-r-3(
       placeholder="Seleccionar filtro..."
       items="$ctrl.filters"
-      ng-model="$ctrl.filterField"
-      class="mar-r-3")
+      ng-model="$ctrl.filterField")
     w-input(
       placeholder="Buscar..."
       on-search="$ctrl.search()"

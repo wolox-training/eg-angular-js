@@ -1,0 +1,33 @@
+@import 'colors';
+
+.form-label {
+  font-size: $text-small;
+  margin-bottom: 10px;
+  padding-left: 3px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  background-color: $wild-sand;
+  border: solid 1px $wild-sand;
+  min-width: 240px;
+  padding: 10px;
+  width: 100%;
+}
+
+.form-control.ng-invalid.ng-touched {
+  border-color: $torch-red;
+}
+
+.form-validator-msg {
+  color: $torch-red;
+  font-size: $text-small;
+}
+
+.form-buttons {
+  text-align: center;
+  margin-top: 60px;
+}

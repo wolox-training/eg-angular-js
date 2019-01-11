@@ -1,0 +1,12 @@
+{
+  "development": {
+    "Environment": {
+      "wBooksApiUrl": "https://wbooks-api-stage.herokuapp.com/api/v1/"
+    }
+  },
+  "production": {
+    "Environment": {
+      "wBooksApiUrl": "http://polls.apiblueprint.org/api/v1/"
+    }
+  }
+}

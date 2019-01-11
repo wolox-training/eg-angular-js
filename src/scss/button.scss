@@ -1,10 +1,21 @@
 .btn {
+  background: $silver;
+  color: $white;
   max-width: 198px;
-  padding: 10px;
+  padding: 12px;
   width: 100%;
+
+  &:disabled {
+    background: $white;
+    cursor: not-allowed;
+    color: $silver;
+  }
 }
 
 .btn-primary {
   background: $blue;
-  color: $white;
+}
+
+.btn-secondary {
+  background: $green;
 }
