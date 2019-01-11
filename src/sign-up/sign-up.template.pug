@@ -22,7 +22,7 @@
       .form-group
         label.form-label(for="firstName")
           | Nombre
-        input#firstName.form-control(type="text" name="firstName" ng-model="$ctrl.user.firstName" ng-pattern="/^[a-zA-Z\s]*$/" required)
+        input#firstName.form-control(type="text" name="firstName" ng-model="$ctrl.user.firstName" ng-pattern="$ctrl.onlyCharsAndSpacesPattern" required)
         p.form-validator-msg(ng-if="signUpForm.firstName.$error.required && signUpForm.firstName.$touched")
           | Ingrese su nombre
         p.form-validator-msg(ng-if="signUpForm.firstName.$error.pattern")
@@ -30,7 +30,7 @@
       .form-group
         label.form-label(for="lastName")
           | Apellido
-        input#lastName.form-control(type="text" name="lastName" ng-model="$ctrl.user.lastName" ng-pattern="/^[a-zA-Z\s]*$/" required)
+        input#lastName.form-control(type="text" name="lastName" ng-model="$ctrl.user.lastName" ng-pattern="$ctrl.onlyCharsAndSpacesPattern" required)
         p.form-validator-msg(ng-if="signUpForm.lastName.$error.required && signUpForm.lastName.$touched")
           | Ingrese su apellido
         p.form-validator-msg(ng-if="signUpForm.lastName.$error.pattern")

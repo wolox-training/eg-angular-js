@@ -3,6 +3,8 @@
     h3.page-title.page-title-center.mar-b-3
       | Login
     form.form-container(name="signUpForm" ng-submit="$ctrl.submit()")
+      .alert(ng-if="$ctrl.errorMessage")
+        | {{$ctrl.errorMessage}}
       .form-group
         label.form-label(for="email")
           | Email
