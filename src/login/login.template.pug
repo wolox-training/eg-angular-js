@@ -2,6 +2,8 @@
   .main-body-medium.pad-l-3.pad-r-3.mar-b-5.mar-t-3
     h3.page-title.page-title-center.mar-b-3(translate="login.title")
     form.form-container(name="signUpForm" ng-submit="$ctrl.submit()")
+      .alert(ng-if="$ctrl.errorMessage")
+        | {{$ctrl.errorMessage}}
       .form-group
         label.form-label(for="email" translate="login.email")
         input#email.form-control(type="email" name="email" ng-model="$ctrl.user.email" ng-pattern="$ctrl.emailValidatorPattern" required)

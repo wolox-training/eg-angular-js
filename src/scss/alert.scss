@@ -1,0 +1,11 @@
+@import 'colors';
+@import 'sizes';
+
+.alert {
+  padding: 5px 30px;
+  border: solid 1px $torch-red;
+  border-left-width: 3px;
+  color: $torch-red;
+  font-size: $text-small;
+  margin: 30px 0;
+}

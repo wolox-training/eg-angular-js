@@ -1,8 +1,8 @@
 'use strict';
 
-angular.module('core.book').factory('Books', ['$http', 'Environment', function ($http, Environment) {
+angular.module('core.book').factory('Books', ['$http', 'Environment', ($http, Environment) => {
   const baseUrlApi = Environment.wBooksApiUrl + 'books';
-  const mapper = (book) => {
+  const mapper = book => {
     return {
       id: book.id,
       author: book.author,
@@ -18,18 +18,12 @@ angular.module('core.book').factory('Books', ['$http', 'Environment', function (
   return {
     get: () => {
       return $http.get(baseUrlApi).then(resp => {
-        if (resp.data) {
-          return resp.data.map(mapper);
-        }
-        return resp.data;
+        return resp.data ? resp.data.map(mapper) : resp.data;
       });
     },
     information: (id) => {
       return $http.get(`${baseUrlApi}/${id}`).then(resp => {
-        if (resp.data) {
-          return mapper(resp.data);
-        }
-        return resp.data;
+        return resp.data ? mapper(resp.data) : resp.data;
       });
     }
   };

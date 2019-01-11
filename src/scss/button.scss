@@ -4,6 +4,12 @@
   max-width: 198px;
   padding: 12px;
   width: 100%;
+
+  &:disabled {
+    background: $white;
+    cursor: not-allowed;
+    color: $silver;
+  }
 }
 
 .btn-primary {
@@ -12,10 +18,4 @@
 
 .btn-secondary {
   background: $green;
-}
-
-.btn:disabled {
-  background: $white;
-  cursor: not-allowed;
-  color: $silver;
 }

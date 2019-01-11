@@ -14,7 +14,6 @@ angular.module('core.auth').factory('Session', ['$http', function ($http) {
   if (localUser) {
     this.user = JSON.parse(localUser);
   }
-
   this.create = function (tokenInfo) {
     localStorage.setItem('tokenInfo', JSON.stringify(tokenInfo));
     this.tokenInfo = tokenInfo;
