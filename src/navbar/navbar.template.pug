@@ -1,0 +1,17 @@
+.navbar-container.mar-b-3
+  a(ui-sref="booksList")
+    img.navbar-logo(src="assets/wbooks_logo.png" alt="wbooks logo")
+  ul.navbar-icons
+    li.navbar-icon-item
+      img.navbar-icon(src="assets/bell.png", alt="notifications")
+    li.navbar-icon-item
+      img.navbar-icon(src="assets/add_book.png", alt="add book")
+    li.navbar-icon-item(ng-click="$ctrl.profileOpened=!$ctrl.profileOpened")
+      img.navbar-icon.navbar-icon-profile(src="assets/default_profile.jpg", alt="profile image")
+      ul.submenu.session-submenu(ng-if="$ctrl.profileOpened")
+        li.submenu-item
+          a.submenu-button
+            | Perfil
+        li.submenu-item
+          a.submenu-button(ng-click="$ctrl.signOut()")
+            | Cerrar sesión

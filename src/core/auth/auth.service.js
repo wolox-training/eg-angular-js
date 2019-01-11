@@ -29,9 +29,8 @@ angular.module('core.auth').factory('Auth', ['$http', 'Environment', 'Session', 
         });
       },
       isAuthenticated: () => {
-        return new Promise(resolve => {
-          resolve(!!Session.user);
-        });
-      }
+        return new Promise(resolve => resolve(!!Session.user));
+      },
+      signOut: () => Session.destroy()
     };
   }]);
