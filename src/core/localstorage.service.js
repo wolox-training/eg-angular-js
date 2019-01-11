@@ -11,9 +11,7 @@ angular.module('localStorage', []).factory('localStorageService', [function () {
     },
     remove: key => {
       if (typeof key === 'object') {
-        for (var k in key) {
-          localStorage.removeItem(k);
-        }
+        key.forEach(k => localStorage.removeItem(k));
       } else if (typeof key === 'string') {
         localStorage.removeItem(key);
       }
