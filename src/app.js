@@ -9,7 +9,7 @@ angular.module('wBooksApp', [
   'wInput'
 ]).
 config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
-  var states = [{ 
+  let states = [{ 
     name: 'booksList', 
     url: '/books', 
     component: 'booksList',
