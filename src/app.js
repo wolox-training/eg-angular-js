@@ -10,41 +10,12 @@ angular.module('wBooksApp', [
   'wInput',
   'signUp',
   'login',
-  'navbar'
-]).config(['$stateProvider', '$urlRouterProvider', '$translateProvider',
-  function($stateProvider, $urlRouterProvider, $translateProvider) {
-    const translations = {
-      global: {
-        search: 'Buscar',
-        noDataFound: 'No se han encontrado resultados',
-        back: 'Volver'
-      },
-      login: {
-        title: 'Iniciar sesión',
-        email: 'Correo electrónico',
-        emailRequired: 'Debe ingresar un correo electrónico',
-        emailInvalid: 'Debe ingresar un email válido',
-        password: 'Contraseña',
-        passwordRequired: 'Debe ingresar una contraseña',
-        passwordInvalid: 'Su contraseña que tenga entre 8 y 52 caracteres, y al menos una letra y un número',
-        loginAction: '@:login.title'
-      },
-      booksList: {
-        selectFilter: 'Seleccionar filtro',
-        search: '@:global.search'
-      },
-      booksDetail: {
-        rent: 'Alquilar',
-        suggestions: 'Sugerencias',
-        comments: 'Comentarios'
-      },
-      navBar: {
-        profile: 'Perfil',
-        signOut: 'Cerrar sesión'
-      }
-    };
+  'navbar',
+  'core.config'
+]).config(['$stateProvider', '$urlRouterProvider', '$translateProvider', 'TRANSLATIONS',
+  function($stateProvider, $urlRouterProvider, $translateProvider, TRANSLATIONS) {
     $translateProvider
-    .translations('es', translations)
+    .translations('es', TRANSLATIONS.es)
     .preferredLanguage('es');
     $translateProvider.useSanitizeValueStrategy('escape');
 
