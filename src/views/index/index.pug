@@ -1,7 +1,7 @@
 doctype html
 html(lang='en')
   head
-    title title here
+    title eBooks
     meta(charset='UTF-8')
     meta(name='viewport' content='width=device-width, initial-scale=1')
     link(rel='preload' href='./index.js' as='script')
@@ -11,9 +11,6 @@ html(lang='en')
     script(src='./vendor.js')
   body
     #app(v-cloak)
-      .page
-        img.logo(src='./assets/wolox_logo.svg' alt='logo')
-        h1.title
-          | {{ title }}
-      example
+      navbar.mar-b-five
+      books
     script(src='./index.js')

@@ -1,0 +1,64 @@
+@import 'variables/sizes';
+
+.main-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-body {
+  max-width: 800px;
+  width: 100%;
+}
+
+.main-body-medium {
+  max-width: 600px;
+  width: 100%;
+}
+
+.pad-l-three {
+  padding-left: 30px;
+}
+
+.pad-r-three {
+  padding-right: 30px;
+}
+
+.mar-b-three {
+  margin-bottom: 30px;
+}
+
+.mar-l-three {
+  margin-left: 30px;
+}
+
+.mar-t-three {
+  margin-top: 30px;
+}
+
+.mar-b-five {
+  margin-bottom: 50px;
+}
+
+.mar-r-three {
+  margin-right: 30px;
+}
+
+.mar-r-two {
+  margin-right: 20px;
+}
+
+.splitter {
+  border-bottom: solid 1px $wolox-blue;
+  padding-bottom: 30px;
+}
+
+.page-title {
+  color: $black;
+  display: block;
+  font-size: $text-big;
+}
+
+.page-title-center {
+  text-align: center;
+}

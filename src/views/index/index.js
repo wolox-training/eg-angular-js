@@ -2,8 +2,8 @@ import Vue from 'vue'
 
 import { installServiceWorker } from '../../serviceWorkerInstaller'
 
-const Example = () => import(/* webpackChunkName: "example" */ '../../components/Example')
-
+const Books = () => import(/* webpackChunkName: "tech-list" */ '../../components/books/Books')
+const Navbar = () => import(/* webpackChunkName: "navbar" */ '../../components/navbar')
 import './index.pug'
 import './index.scss'
 
@@ -11,7 +11,8 @@ import './index.scss'
 const vm = new Vue({
   el: '#app',
   components: {
-    Example
+    Books,
+    Navbar
   },
   data: {
     title: 'Welcome to Frontend Bootstrap!'
