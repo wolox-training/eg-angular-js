@@ -11,41 +11,8 @@
   width: 100%;
 }
 
-.main-body-medium {
-  max-width: 600px;
-  width: 100%;
-}
-
-.pad-l-three {
-  padding-left: 30px;
-}
-
-.pad-r-three {
-  padding-right: 30px;
-}
-
-.mar-b-three {
-  margin-bottom: 30px;
-}
-
-.mar-l-three {
-  margin-left: 30px;
-}
-
-.mar-t-three {
-  margin-top: 30px;
-}
-
-.mar-b-five {
-  margin-bottom: 50px;
-}
-
-.mar-r-three {
-  margin-right: 30px;
-}
-
-.mar-r-two {
-  margin-right: 20px;
+.navbar-top-spacing {
+  margin-top: $navbar-height + 30px;
 }
 
 .splitter {
@@ -57,8 +24,4 @@
   color: $black;
   display: block;
   font-size: $text-big;
-}
-
-.page-title-center {
-  text-align: center;
 }

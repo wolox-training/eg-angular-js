@@ -1,9 +1,8 @@
 import Vue from 'vue'
 
 import { installServiceWorker } from '../../serviceWorkerInstaller'
-
-const Books = () => import(/* webpackChunkName: "tech-list" */ '../../components/books/Books')
-const Navbar = () => import(/* webpackChunkName: "navbar" */ '../../components/navbar')
+import Books from '../../components/books/Books'
+import Navbar from '../../components/navbar'
 import './index.pug'
 import './index.scss'
 

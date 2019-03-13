@@ -1,24 +1,29 @@
 <template lang="pug">
 a(href='#')
   .book-item(:class='{ "book-item-small": small }')
-    img.book-item-image(alt='book image' src='' v-bind:src='book.image_url || "assets/book_logo.png"')
-    p.book-item-title(v-if='!small')
-      | {{book.title}}
-    p.book-item-author(v-if='!small')
-      | {{book.author}}
+    img.book-item-image(alt='book image',
+      src='',
+      :alt='book.title',
+      :src='book.image_url || defaultImage')
+    div(v-if='!small')
+      p.book-item-title
+        | {{book.title}}
+      p.book-item-author
+        | {{book.author}}
 </template>
 <script>
+import bookLogo from './../../assets/book_logo.png'
 export default {
   props: {
     book: {
       type: Object,
-      required: false,
       default: undefined
-    }
+    },
+    small: false
   },
   data() {
     return {
-      small: null
+      defaultImage: bookLogo
     }
   }
 }

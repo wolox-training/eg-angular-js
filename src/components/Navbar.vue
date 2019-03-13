@@ -1,5 +1,5 @@
 <template lang="pug">
-.navbar-container.mar-b-3
+.navbar-container
   a(href='#')
     img.navbar-logo(src='assets/wbooks_logo.png' alt='wbooks logo')
   ul.navbar-icons
@@ -11,13 +11,19 @@ export default {}
 </script>
 <style lang="scss">
 @import './../scss/variables/colors';
+@import './../scss/variables/sizes';
 
 .navbar-container {
-  box-shadow: 0 0 15px $dusty-gray;
+  align-items: center;
+  background: $white;
+  box-shadow: 0px 8px 10px $dusty-gray;
   display: flex;
-  height: 100px;
+  height: $navbar-height;
   justify-content: space-between;
-  padding: 23px 34px;
+  padding: 0px 30px;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .navbar-logo {
