@@ -1,11 +1,15 @@
 <template lang="pug">
 .main-container
+  .books-filter.main-body
+    input.books-search-input(type='text'
+      placeholder='Buscar...'
+      v-model='filter')
   .book-items.main-body
-    book-item(v-for='book in books',
+    book-item(v-for='book in booksFiltered',
       :key='book.id',
       :book='book')
-    p(v-if='!books.length')
-      | No hay datos
+    p(v-if='!booksFiltered.length')
+      | No se encontraron techs
 </template>
 <script>
 import { getBooks } from './../../services/books.service'
@@ -17,7 +21,16 @@ export default {
       books: [],
       filters: [],
       filterField: null,
-      filteredBooks: []
+      filteredBooks: [],
+      filter: ''
+    }
+  },
+  computed: {
+    booksFiltered: function booksFiltered() {
+      return this.filter ? this.books.filter(book =>
+        `${book.title} ${book.author}`
+          .toLowerCase()
+          .indexOf(this.filter.toLowerCase()) >= 0) : this.books
     }
   },
   created() {
@@ -33,6 +46,8 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+@import './../../scss/variables/colors';
+
 .book-items,
 .book-items-inline {
   display: flex;
@@ -45,5 +60,17 @@ export default {
 
 .book-items-inline {
   justify-content: flex-start;
+}
+
+.books-filter {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 20px;
+}
+
+.books-search-input {
+  width: 220px;
+  padding: 10px;
+  border-bottom: solid 1px $wolox-green;
 }
 </style>
