@@ -1,12 +1,8 @@
 import { create } from 'apisauce'
 
 const api = create({
-  baseURL: 'http://demo2269650.mockable.io',
+  baseURL: process.env.API_URL,
   headers: { Accept: 'application/json' }
 })
 
-export default {
-  get() {
-    return api.get('/books')
-  }
-}
+export const getBooks = () => api.get('/books')

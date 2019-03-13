@@ -8,7 +8,7 @@
       | No hay datos
 </template>
 <script>
-import TechsService from './../../services/books.service'
+import { getBooks } from './../../services/books.service'
 import BookItem from './../../components/books/BookItem'
 
 export default {
@@ -21,7 +21,7 @@ export default {
     }
   },
   created() {
-    TechsService.get().then(response => {
+    getBooks().then(response => {
       if (!response.problem) {
         this.books = response.data
       }
