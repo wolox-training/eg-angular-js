@@ -1,8 +1,9 @@
 <template lang="pug">
 .main-container
   .book-items.main-body
-    book-item(v-for='book in books',
-      :key='book.id',
+    book-item(
+      v-for='book in books'
+      :key='book.id'
       :book='book')
     p(v-if='!books.length')
       | No hay datos

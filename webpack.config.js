@@ -46,15 +46,6 @@ module.exports = {
         loader: 'vue-loader'
       },
       {
-        enforce: 'pre',
-        test: /\.pug$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'vue-pug-lint-loader',
-          options: require('./.pug-lintrc.json')
-        }
-      },
-      {
         test: /\.pug$/,
         oneOf: [
           // this applies to `<template lang="pug">` in Vue components
