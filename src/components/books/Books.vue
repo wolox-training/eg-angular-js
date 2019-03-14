@@ -5,8 +5,9 @@
       placeholder='Buscar...'
       v-model='filter')
   .book-items.main-body
-    book-item(v-for='book in booksFiltered',
-      :key='book.id',
+    book-item(
+      v-for='book in booksFiltered'
+      :key='book.id'
       :book='book')
     p(v-if='!booksFiltered.length')
       | No se encontraron techs
