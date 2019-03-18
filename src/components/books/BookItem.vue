@@ -11,19 +11,23 @@ a(href='#')
         | {{book.author}}
 </template>
 <script>
-import bookLogo from './../../assets/book_logo.png'
 export default {
   props: {
     book: {
       type: Object,
       default: undefined
     },
-    small: false
+    small: {
+      type: Boolean,
+      default: false
+    },
+    defaultImage: {
+      type: String,
+      default: './../../assets/book_logo.png'
+    }
   },
   data() {
-    return {
-      defaultImage: bookLogo
-    }
+    return {}
   }
 }
 </script>
