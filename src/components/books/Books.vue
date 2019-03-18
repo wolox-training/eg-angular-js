@@ -4,7 +4,7 @@
     input.books-search-input(type='text'
       placeholder='Buscar...'
       v-model='filter')
-  .book-items.main-body
+  transition-group.book-items.main-body(name='list' tag='div')
     book-item(
       v-for='book in booksFiltered'
       :key='book.id'
@@ -74,4 +74,19 @@ export default {
   padding: 10px;
   border-bottom: solid 1px $wolox-green;
 }
+
+.list-enter,
+.list-leave-to {
+  opacity: 0
+}
+
+.list-enter-active,
+.list-leave-active {
+  transition: opacity .5s
+}
+
+.list-move {
+  transition: transform .5s;
+}
+
 </style>
