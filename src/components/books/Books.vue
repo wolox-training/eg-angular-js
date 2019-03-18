@@ -2,15 +2,15 @@
 .main-container
   .books-filter.main-body
     input.books-search-input(type='text'
-      placeholder='Buscar...'
+      :placeholder='$t("BOOKS.SEARCH")'
       v-model='filter')
   transition-group.book-items.main-body(name='list' tag='div')
     book-item(
       v-for='book in booksFiltered'
       :key='book.id'
       :book='book')
-    p(v-if='!booksFiltered.length')
-      | No se encontraron techs
+  p(v-if='!booksFiltered.length')
+    | {{ $t("BOOKS.RESULTS_NOT_FOUND") }}
 </template>
 <script>
 import { getBooks } from './../../services/books.service'
