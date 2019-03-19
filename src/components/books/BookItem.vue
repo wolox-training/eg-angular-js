@@ -2,7 +2,7 @@
 .book-item(:class='{ "book-item-small": small }')
   img.book-item-image(
     :alt='book.title'
-    :src='book.image_url || defaultImage')
+    :src='book.image_url')
   div(v-if='!small')
     p.book-item-title
       | {{book.title}}
@@ -14,7 +14,8 @@ export default {
   props: {
     book: {
       type: Object,
-      default: undefined
+      // eslint-disable-next-line camelcase
+      default: () => ({ image_url: this.defaultImage })
     },
     small: {
       type: Boolean,
