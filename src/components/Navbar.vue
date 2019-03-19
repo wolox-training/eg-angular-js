@@ -16,11 +16,11 @@ export default {}
 .navbar-container {
   align-items: center;
   background: $white;
-  box-shadow: 0px 8px 10px $dusty-gray;
+  box-shadow: 0 8px 10px $dusty-gray;
   display: flex;
   height: $navbar-height;
   justify-content: space-between;
-  padding: 0px 30px;
+  padding: 0 30px;
   position: fixed;
   top: 0;
   width: 100%;
