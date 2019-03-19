@@ -2,7 +2,7 @@
 .book-item(:class='{ "book-item-small": small }')
   img.book-item-image(
     :alt='book.title'
-    :src='book.image_url')
+    :src='book.image_url || defaultImage')
   div(v-if='!small')
     p.book-item-title
       | {{book.title}}
