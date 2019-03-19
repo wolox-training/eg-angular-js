@@ -1,0 +1,16 @@
+@import 'variables/sizes';
+
+.main-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-body {
+  max-width: 800px;
+  width: 100%;
+}
+
+.navbar-top-spacing {
+  margin-top: $navbar-height + 30px;
+}
