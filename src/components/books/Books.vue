@@ -27,7 +27,7 @@ export default {
     }
   },
   computed: {
-    booksFiltered: function booksFiltered() {
+    booksFiltered () {
       return this.filter ? this.books.filter(book =>
         `${book.title} ${book.author}`
           .toLowerCase()
